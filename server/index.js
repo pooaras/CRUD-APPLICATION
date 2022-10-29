@@ -15,7 +15,11 @@ mongoose.connect("mongodb+srv://pooaraz:htrae7OtlKULs7K7@crud.kxyyig9.mongodb.ne
 app.post("/insert",async(req,res)=>{
     const mobilenum=req.body.mobilenum;
     const amount=req.body.amount;
-    const detail=new schema1({phonenumber:mobilenum,plan:amount})
+    var type=req.body.type;
+    var operator=req.body.operator;
+    var circle=req.body.circle;
+
+    const detail=new schema1({type:type,phonenumber:mobilenum,operator:operator,circle:circle,plan:amount})
     try{
         await detail.save();
         res.send("inseted data...")
