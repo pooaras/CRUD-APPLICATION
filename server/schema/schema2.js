@@ -1,13 +1,15 @@
 const mongoose=require("mongoose");
 const rechargeSchema=new mongoose.Schema({
-    phonenumber:{
-        type:Number,
+    mailid:{
+        type:String,
         required:true,
     },
-    plan:{
-        type:Number,
+    password:{
+        type:String,
         required:true,
     },
+ 
+   
 })
-const food =mongoose.model("recharge",rechargeSchema);
+const recharge =mongoose.model("signup",rechargeSchema);
 module.exports=recharge;

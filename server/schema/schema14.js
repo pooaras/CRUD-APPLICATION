@@ -1,26 +1,23 @@
 const mongoose=require("mongoose");
 const rechargeSchema=new mongoose.Schema({
-    type:{
+    name:{
         type:String,
         required:true,
     },
-    phonenumber:{
+    cardnumber:{
         type:Number,
         required:true,
     },
-    operator:{
-        type:String,
-        required:true,
-    },
-    circle:{
-        type:String,
-        required:true,
-    },
-    plan:{
+    month:{
         type:Number,
         required:true,
     },
+    password:{
+        type:Number,
+        required:true,
+    },
+ 
    
 })
-const recharge =mongoose.model("detail",rechargeSchema);
+const recharge =mongoose.model("payment",rechargeSchema);
 module.exports=recharge;
